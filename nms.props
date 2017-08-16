@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- globals -->
+  <PropertyGroup Label="Globals">
+    <RootNamespace>nms</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <!-- cpp: defaults -->
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <WholeProgramOptimization Condition="'$(Configuration)'=='Release'">true</WholeProgramOptimization>
+  </PropertyGroup>
+  <!-- cpp: environment -->
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <IntDir Condition="Exists('z:\vc')">z:\vc\$(SolutionName)\$(ProjectName)\$(Platform).$(Configuration)\</IntDir>
+    <IntDir Condition="!Exists('z:\vc')">$(SolutionDir)\.vs\$(ProjectName)\$(Platform).$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\..\publish\bin\</OutDir>
+  </PropertyGroup>
+  <!-- cpp: compile/link -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <!-- path -->
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\%(FileName).obj</ObjectFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <!--debug-->
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <!--library-->
+      <RuntimeLibrary Condition="'$(Configuration)'=='Release'">MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(Configuration)'=='Debug'">MultiThreadedDebug</RuntimeLibrary>
+      <!-- optimization -->
+      <Optimization Condition="'$(Configuration)'=='Debug'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)'=='Release'">Full</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)' == 'Debug'">OnlyExplicitInline</InlineFunctionExpansion>
+      <!--compile: info-->
+      <WarningLevel>Level3</WarningLevel>
+      <!--cpp: langauge-->
+      <AdditionalOptions>/std:c++latest  %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+</Project>
