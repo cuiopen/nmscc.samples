@@ -13,7 +13,7 @@ int main() {
     y <<= vlins(1.0f);
 
     // cuda invoke(my_cuda_axpy)
-    nms_cuda_kfunc(my_cuda_axpy)[{100}](0.01f, x, y);
+    nms_cuda_kfunc(my_cuda_axpy)[{100u}](0.01f, x, y);
 
     // copy device to host
     Array<float, 1>  hx(x.size());

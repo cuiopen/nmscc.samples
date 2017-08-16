@@ -4,9 +4,6 @@
   <PropertyGroup Label="Globals">
     <RootNamespace>nms</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup Label="Configuration">
-    <PlatformToolset>v140</PlatformToolset>
-  </PropertyGroup>
   <!-- cpp: defaults -->
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
@@ -40,5 +37,9 @@
       <AdditionalOptions>/std:c++latest  %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link />
+    <Link>
+      <AdditionalLibraryDirectories>$(TargetDir)..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>nms.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
 </Project>

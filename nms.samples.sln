@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nms.cuda.simple", "nms.cuda.simple\nms.cuda.simple.vcxproj", "{AB2A4AE8-C6F2-4F07-9B8A-8FD4C307D9E1}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nms", "..\nms.vcxproj", "{7FACC7EF-77DC-4537-8265-BC993EFCE1EC}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nms.compiler", "..\nms.compiler.vcxproj", "{98C9BA59-EC5E-4FB7-9FDB-E92591CA92EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,16 +15,11 @@ Global
 		{AB2A4AE8-C6F2-4F07-9B8A-8FD4C307D9E1}.Debug|x64.Build.0 = Debug|x64
 		{AB2A4AE8-C6F2-4F07-9B8A-8FD4C307D9E1}.Release|x64.ActiveCfg = Release|x64
 		{AB2A4AE8-C6F2-4F07-9B8A-8FD4C307D9E1}.Release|x64.Build.0 = Release|x64
-		{7FACC7EF-77DC-4537-8265-BC993EFCE1EC}.Debug|x64.ActiveCfg = Debug|x64
-		{7FACC7EF-77DC-4537-8265-BC993EFCE1EC}.Debug|x64.Build.0 = Debug|x64
-		{7FACC7EF-77DC-4537-8265-BC993EFCE1EC}.Release|x64.ActiveCfg = Release|x64
-		{7FACC7EF-77DC-4537-8265-BC993EFCE1EC}.Release|x64.Build.0 = Release|x64
-		{98C9BA59-EC5E-4FB7-9FDB-E92591CA92EB}.Debug|x64.ActiveCfg = Debug|x64
-		{98C9BA59-EC5E-4FB7-9FDB-E92591CA92EB}.Debug|x64.Build.0 = Debug|x64
-		{98C9BA59-EC5E-4FB7-9FDB-E92591CA92EB}.Release|x64.ActiveCfg = Release|x64
-		{98C9BA59-EC5E-4FB7-9FDB-E92591CA92EB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {699797EF-5773-4B8C-BE77-481948BE8FA5}
 	EndGlobalSection
 EndGlobal

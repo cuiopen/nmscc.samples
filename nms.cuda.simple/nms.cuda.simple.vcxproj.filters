@@ -7,15 +7,18 @@
     <Filter Include="src">
       <UniqueIdentifier>{0b8cb01e-93fe-46a6-b69f-e7014021237d}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\main.cc">
-      <Filter>src</Filter>
-    </ClCompile>
+    <Filter Include="{extern}">
+      <UniqueIdentifier>{259b64cd-d977-4d70-89aa-77b637e926d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cuda\axpy.h">
       <Filter>cuda</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
